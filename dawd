@@ -1,0 +1,20 @@
+local plr = game.Players.LocalPlayer
+
+local ScreenGui = Instance.new('ScreenGui')
+ScreenGui.Parent = plr.PlayerGui
+
+local frame = Instance.new('Frame')
+frame.Parent = ScreenGui
+
+frame.Position = UDim2.new(.5, 0, .5, 0)
+local text = Instance.new('TextLabel')
+
+text.Parent = frame
+
+for _, v in pairs(plr:GetChildren()) do
+
+  text.Text = v.Name
+  
+  wait(4)
+
+end)
